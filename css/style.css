@@ -1,0 +1,145 @@
+/* css/style.css */
+
+/* 기본 설정: Apple 스타일의 깔끔한 폰트와 따뜻한 베이지 계열 배경색 */
+:root {
+    --primary-color: #333333; /* 주요 텍스트 색상 */
+    --secondary-color: #8a8a8a; /* 보조 텍스트 색상 */
+    --accent-color: #e07a5f; /* 강조 색상 (따뜻한 오렌지 계열) */
+    --background-color: #f7f7f2; /* 부드러운 배경색 (약간의 베이지) */
+    --card-background: #ffffff; /* 카드/영역 배경색 */
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    padding-top: 60px; /* 헤더 공간 확보 */
+}
+
+/* 헤더: 미니멀하고 고정된 상단 바 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--card-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* 메인 콘텐츠 레이아웃 */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Hero 섹션: 깔끔한 중앙 정렬 헤드라인 */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.05em; /* Apple 스타일의 촘촘한 글자 간격 */
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+/* CTA 버튼 스타일 */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 999px; /* 완벽하게 둥근 모서리 */
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #c4684c; /* 약간 어두운 색상 */
+    transform: translateY(-2px);
+}
+
+/* 카드 스타일 (소개/연락처 페이지 등에 활용) */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    border-top: 1px solid #e0e0e0;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
